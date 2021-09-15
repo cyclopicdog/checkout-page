@@ -4,8 +4,93 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Check out</title>
   </head>
-  <body></body>
+  <body>
+    <form
+      action="https://classes.codingbootcamp.cz/assets/classes/request-visualization/script.php"
+      method="POST"
+    >
+      <!-- container for everything -->
+      <section class="payment">
+        <!-- container for the items and pay button -->
+
+        <div class="bill">
+          <h2 class="bill__heading">Total</h2>
+          <div class="bill__price">$698</div>
+
+          <h2 class="bill__heading">Detail</h2>
+          <div class="bill__product-line">
+            <div class="bill__product">Product One</div>
+            <div class="bill__product-price">$599</div>
+          </div>
+          <div class="bill__product-line">
+            <div class="bill__product">Product Two</div>
+            <div class="bill__product-price">$88</div>
+          </div>
+          <button type="submit" name="paying" value="pay" class="bill__pay">
+            pay now
+          </button>
+        </div>
+
+        <!-- container for the card -->
+
+        <div class="card-container">
+          <div class="card">
+            <label for="name" class="card__label">name</label
+            ><input
+              type="text"
+              name="name"
+              value="John Doe"
+              class="card__input"
+            />
+            <label for="card-number" class="card__label">card number</label
+            ><input
+              type="text"
+              value="1111 1111 1111 1111"
+              class="card__input"
+              required
+            />
+
+            <div class="card__bottom-row">
+              <div class="card__bottom-row--left">
+                <label for="exp-date" class="card__label">expiration date</label
+                ><input
+                  type="text"
+                  name="exp-date[month]"
+                  value="MM"
+                  class="card__input card__input--month"
+                  required
+                />
+                <input
+                  type="text"
+                  name="exp-date[year]"
+                  value="YYYY"
+                  class="card__input card__input--year"
+                  required
+                />
+              </div>
+              <dive class="card__bottom-row--right">
+                <label for="cvv" class="card__label">CVV</label
+                ><input
+                  type="text"
+                  name="cvv"
+                  value="123"
+                  class="card__input card__input--cvv"
+                  required
+                />
+              </dive>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+  </body>
 </html>
